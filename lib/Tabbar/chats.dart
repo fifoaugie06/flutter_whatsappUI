@@ -6,18 +6,34 @@ class Chats extends StatefulWidget {
 }
 
 class _ChatsState extends State<Chats> {
-  List send = ["Augie", "Rizqiyanto",
-    "Nenes", "Annan", "INFORMATICS D'18",
-    "ASLAB '18", "Pengajian Sore", "Keluarga Cemara"
+  List send = [
+    "Augie",
+    "Rizqiyanto",
+    "Nenes",
+    "Annan",
+    "ASLAB '18",
+    "INFORMATICS D '18",
+    "Pengajian Sore",
+    "Keluarga Cemara"
   ];
   List message = [
-    "Halo Gaes apa kabar", "Tugas apa kabar ?", "Woy tugase garapen",
-    "Kamu dimana ?", "Cendol Cendol apa yang seger ?", "Flutter yukkssss",
-    "Jangan Lupa jamaah hari ini", "Kunci kos jangan tertinggal"
+    "Halo Gaes apa kabar",
+    "Tugas apa kabar ?",
+    "Woy tugase garapen",
+    "Kamu dimana ?",
+    "Cendol Cendol apa yang seger ?",
+    "Flutter yukkssss",
+    "Jangan Lupa jamaah hari ini",
+    "Kunci kos jangan tertinggal"
   ];
-  List time = ["19.19",
-    "04.01", "23.59", "01.01",
-    "10.29", "07.03", "05.00",
+  List time = [
+    "19.19",
+    "04.01",
+    "23.59",
+    "01.01",
+    "10.29",
+    "07.03",
+    "05.00",
     "09.00"
   ];
 
@@ -43,9 +59,11 @@ class _ChatsState extends State<Chats> {
                               width: 53,
                               height: 53,
                               decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xff075e54),
-                              ),
+                                  shape: BoxShape.circle,
+                                  color: Color(0xff075e54),
+                                  image: new DecorationImage(
+                                      image: new AssetImage(
+                                          'assets/images/augie.jpg'))),
                             ),
                             Container(
                               margin: EdgeInsets.only(
@@ -53,7 +71,8 @@ class _ChatsState extends State<Chats> {
                               child: Row(
                                 children: <Widget>[
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
@@ -66,9 +85,7 @@ class _ChatsState extends State<Chats> {
                                       ),
                                       Text(
                                         message[i],
-                                        style: TextStyle(
-                                          color: Colors.grey
-                                        ),
+                                        style: TextStyle(color: Colors.grey),
                                       ),
                                     ],
                                   )
@@ -93,7 +110,6 @@ class _ChatsState extends State<Chats> {
                     Container(
                       margin: EdgeInsets.only(top: 12, right: 6),
                       height: 60,
-
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -101,8 +117,13 @@ class _ChatsState extends State<Chats> {
                             time[i],
                             style: TextStyle(fontSize: 11),
                           ),
-                          SizedBox(height: 6,),
-                          Icon(Icons.cancel, color: Colors.grey,),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Icon(
+                            Icons.add,
+                            color: Colors.grey,
+                          ),
                         ],
                       ),
                     ),
@@ -120,7 +141,10 @@ class _ChatsState extends State<Chats> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.message, color: Colors.white,),
+        child: Icon(
+          Icons.message,
+          color: Colors.white,
+        ),
         backgroundColor: Color(0xff25d366),
       ),
     );

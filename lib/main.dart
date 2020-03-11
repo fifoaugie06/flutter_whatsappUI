@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
+class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   TabController controller;
 
   @override
@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
               child: Row(
                 children: <Widget>[
                   Icon(Icons.search),
-                  SizedBox(width : 16),
+                  SizedBox(width: 16),
                   Icon(Icons.more_vert)
                 ],
               ),
@@ -51,19 +51,21 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
             controller: controller,
             indicatorColor: Color(0xffece5dd),
             tabs: <Tab>[
-              Tab(text: 'CHATS',),
-              Tab(text: 'STATUS',),
-              Tab(text: 'CALLS',),
+              Tab(
+                text: 'CHATS',
+              ),
+              Tab(
+                text: 'STATUS',
+              ),
+              Tab(
+                text: 'CALLS',
+              ),
             ],
           ),
         ),
         body: TabBarView(
           controller: controller,
-          children: <Widget>[
-            Chats(),
-            Status(),
-            Calls()
-          ],
+          children: <Widget>[Chats(), Status(), Calls()],
         ),
       ),
     );
