@@ -65,10 +65,6 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
             Calls()
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.message, color: Colors.white,),
-          backgroundColor: Color(0xff25d366),
-        ),
       ),
     );
   }
