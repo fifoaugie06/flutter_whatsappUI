@@ -24,20 +24,19 @@ class _StatusState extends State<Status> {
         child: Column(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 8, right: 8),
+              padding: EdgeInsets.only(left: 10, right: 10),
               width: double.infinity,
               height: 70,
               child: Row(
                 children: <Widget>[
                   Container(
-                    width: 55,
-                    height: 55,
+                    width: 57,
+                    height: 57,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey[300],
                       border: Border.all(
                         width: 2.5,
-                        color: Colors.grey[500],
+                        color: Colors.grey[400],
                       ),
                       image: new DecorationImage(
                           image: new AssetImage('assets/images/augie.jpg')),
@@ -86,7 +85,7 @@ class _StatusState extends State<Status> {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 7, left: 8, right: 8),
+              padding: EdgeInsets.only(top: 7, left: 10, right: 10),
               width: double.infinity,
               height: 30,
               color: Colors.grey[300],
@@ -96,12 +95,12 @@ class _StatusState extends State<Status> {
             Container(
               width: double.infinity,
               height: 70,
-              padding: EdgeInsets.only(left: 8, right: 8),
+              padding: EdgeInsets.only(left: 10, right: 10),
               child: Row(
                 children: <Widget>[
                   Container(
-                    width: 55,
-                    height: 55,
+                    width: 57,
+                    height: 57,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey[300],
@@ -144,14 +143,20 @@ class _StatusState extends State<Status> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(left: 77),
+              color: Colors.grey[200],
+              width: double.infinity,
+              height: 1,
+            ),
+            Container(
               width: double.infinity,
               height: 70,
-              padding: EdgeInsets.only(left: 8, right: 8),
+              padding: EdgeInsets.only(left: 10, right: 10),
               child: Row(
                 children: <Widget>[
                   Container(
-                    width: 55,
-                    height: 55,
+                    width: 57,
+                    height: 57,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey[300],
@@ -194,7 +199,7 @@ class _StatusState extends State<Status> {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 7, left: 8, right: 8),
+              padding: EdgeInsets.only(top: 7, left: 10, right: 10),
               width: double.infinity,
               height: 30,
               color: Colors.grey[300],
@@ -212,58 +217,68 @@ class _StatusState extends State<Status> {
                     children: <Widget>[
                       Expanded(
                         flex: 10,
-                        child: Container(
-                          padding: EdgeInsets.only(left: 8, right: 8),
-                          height: 70,
-                          child: Row(
-                            children: <Widget>[
-                              Container(
-                                width: 55,
-                                height: 55,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.grey[300],
-                                  border: Border.all(
-                                    width: 2.5,
-                                    color: Colors.grey[500],
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              height: 70,
+                              child: Row(
+                                children: <Widget>[
+                                  Container(
+                                    width: 57,
+                                    height: 57,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.grey[300],
+                                      border: Border.all(
+                                        width: 2.5,
+                                        color: Colors.grey[400],
+                                      ),
+                                      image: new DecorationImage(
+                                          image: new AssetImage(
+                                              'assets/images/augie.jpg')),
+                                    ),
                                   ),
-                                  image: new DecorationImage(
-                                      image: new AssetImage(
-                                          'assets/images/augie.jpg')),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 10,
-                                child: Container(
-                                  margin: EdgeInsets.only(left: 6),
-                                  padding: EdgeInsets.only(left: 8),
-                                  width: 100,
-                                  height: 70,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        status[i],
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
+                                  Expanded(
+                                    flex: 10,
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 6),
+                                      padding: EdgeInsets.only(left: 8),
+                                      width: 100,
+                                      height: 70,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            status[i],
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 6,
+                                          ),
+                                          Text(
+                                            status[i] + ' ago',
+                                            style: TextStyle(
+                                                color: Colors.grey[500]),
+                                          ),
+                                        ],
                                       ),
-                                      SizedBox(
-                                        height: 6,
-                                      ),
-                                      Text(
-                                        status[i] + ' ago',
-                                        style:
-                                            TextStyle(color: Colors.grey[500]),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 77),
+                              color: Colors.grey[200],
+                              height: 1,
+                            )
+                          ],
                         ),
                       ),
                     ],

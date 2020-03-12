@@ -52,13 +52,13 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
             indicatorColor: Color(0xffece5dd),
             tabs: <Tab>[
               Tab(
-                text: 'CHATS',
+                child: Text('CHATS'),
               ),
               Tab(
-                text: 'STATUS',
+                child: Text('STATUS'),
               ),
               Tab(
-                text: 'CALLS',
+                child: Text('CALLS'),
               ),
             ],
           ),

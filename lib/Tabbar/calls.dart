@@ -108,8 +108,8 @@ class _CallsState extends State<Calls> {
                         child: Row(
                           children: <Widget>[
                             Container(
-                              width: 53,
-                              height: 53,
+                              width: 57,
+                              height: 57,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xff075e54),
@@ -158,7 +158,7 @@ class _CallsState extends State<Calls> {
                         )),
                     Container(
                       margin: EdgeInsets.only(left: 66, top: 7),
-                      color: Colors.grey[300],
+                      color: Colors.grey[200],
                       width: double.infinity,
                       height: 1,
                     )
